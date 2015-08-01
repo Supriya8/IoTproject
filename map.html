@@ -1,0 +1,59 @@
+<html>
+  <head>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["map"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [41.15, -81.35, 'agupta12/skottur'],
+          [41.1609868, -81.3876768, 'Ataherim'],
+          [41.147443, -81.338107, 'bdharava'],
+          [41.146021, -81.397778, 'btilton'],
+          [41.172344, -81.3440438, 'dvanka'],
+          //[41.541261, -82.124265, 'dkumar3'],
+          [41.21, -81.42, 'dverhas'],
+          [41.1638449, -81.343306, 'hmothuka'],
+          [41.1395, -81.33, 'leenatha03'],
+          [41.1395, -81.33, 'lvancha'],
+          [41.1638449, -81.343306, 'menugu'],
+          [41.141207, -81.324255, 'rkaparth'],
+          [41.1638449, -81.3443406, 'rkollipa'],
+          //[41.3600479, -81.4498377, 'rpanwar'],
+          [41.14, -81.35, 'Rusul'],
+          [41.141207, -81.324255, 'sadapa'],
+          [41.15, -81.36,'Xiqian Han'],
+          [41.153855, -81.333931, 'sjanjana'],
+          //[44.5403, -78.5463, 'Tahani'],
+          //[41.15, -82.81, 'wdelp'],
+          [41.1367883, -81.3323746, 'tgudela'],
+          [41.1395, -81.33, 'ukaviray'],
+          [41.1395, -81.33, 'usuryava'],
+          [41.141207, -81.324255, 'vtangutu'],
+          [41.141207, -81.324255, 'vvedam'],
+          [41.1537559, -81.354, 'ypotluri']
+        ]);
+
+        /*var options = {
+          icons: {
+            default: {
+              normal: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+              selected: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+            }
+          }
+        };*/
+
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {showTip: true});
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map_div" style="width: 950px; height: 600px"></div>
+  </body>
+</html>
